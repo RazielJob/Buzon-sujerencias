@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es" class="smooth-scroll">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0070f3" />
+    <meta
+      name="description"
+      content="Buzón de Sugerencias - Comparte tus ideas"
+    />
+    <title>Buzón de Sugerencias</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light-theme">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo">
+            <img src="images/logo_empresa.jpeg" alt="Logo" class="logo-image" />
+            <span class="logo-text">Buzón de Sugerencias</span>
+            <span class="logo-dot">●</span>
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a href="#sugerencias" class="nav-link">Enviar Sugerencia</a>
+            </li>
+            <li>
+              <a href="#sugerencias-recientes" class="nav-link"
+                >Sugerencias Recientes</a
+              >
+            </li>
+            <li><a href="#estadisticas" class="nav-link">Estadísticas</a></li>
+          </ul>
+          <div class="nav-actions">
+            <button id="themeToggle" class="theme-toggle">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="mobile-menu-toggle" id="menuToggle">
+              <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="container">
+        <div class="mobile-menu-header">
+          <div class="logo">
+            <span class="logo-text">Buzón de Sugerencias</span>
+            <span class="logo-dot">●</span>
+          </div>
+          <button id="closeMenu" class="close-menu">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <ul class="mobile-nav-links">
+          <li>
+            <a href="#sugerencias" class="mobile-nav-link">Enviar Sugerencia</a>
+          </li>
+          <li>
+            <a href="#sugerencias-recientes" class="mobile-nav-link"
+              >Sugerencias Recientes</a
+            >
+          </li>
+          <li>
+            <a href="#estadisticas" class="mobile-nav-link">Estadísticas</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Tu <span class="text-gradient">Voz</span> Importa
+          </h1>
+          <p class="hero-description">
+            Comparte tus ideas, sugerencias y comentarios para
+            <strong>mejorar juntos</strong>
+          </p>
+          <div class="hero-actions">
+            <a href="#sugerencias" class="btn btn-primary">Enviar Sugerencia</a>
+            <a href="#sugerencias-recientes" class="btn btn-secondary"
+              >Ver Sugerencias</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de Sugerencias -->
+    <section id="sugerencias" class="section">
+      <div class="container">
+        <h2 class="section-title">Enviar Sugerencia</h2>
+        <p class="section-description">
+          Comparte tus ideas para mejorar nuestros servicios
+        </p>
+
+        <div class="form-container">
+          <form id="sugerenciaForm" class="suggestion-form">
+            <div class="form-group">
+              <label for="nombre" class="form-label">Nombre (opcional)</label>
+              <input type="text" name="nombre" id="nombre" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email (opcional)</label>
+              <input type="email" name="email" id="email" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label for="categoria" class="form-label">Categoría</label>
+              <select
+                name="categoria"
+                id="categoria"
+                required
+                class="form-input"
+              >
+                <option value="">Selecciona una categoría</option>
+                <option value="mejora">Mejora de Procesos</option>
+                <option value="nueva-funcionalidad">Nueva Funcionalidad</option>
+                <option value="experiencia-usuario">
+                  Experiencia de Usuario
+                </option>
+                <option value="contenido">Contenido</option>
+                <option value="tecnico">Problema Técnico</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sugerencia" class="form-label">Tu Sugerencia</label>
+              <textarea
+                name="sugerencia"
+                id="sugerencia"
+                rows="6"
+                required
+                class="form-input"
+                placeholder="Describe tu sugerencia en detalle..."
+              ></textarea>
+              <div id="char-counter" class="char-counter">0 caracteres</div>
+            </div>
+            <div class="form-group checkbox-group">
+              <input
+                type="checkbox"
+                name="anonimo"
+                id="anonimo"
+                class="checkbox"
+              />
+              <label for="anonimo" class="checkbox-label"
+                >Enviar de forma anónima</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Enviar Sugerencia
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sugerencias Recientes -->
+    <section id="sugerencias-recientes" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Sugerencias Recientes</h2>
+        <p class="section-description">
+          Ideas compartidas por nuestra comunidad
+        </p>
+
+        <div id="lista-sugerencias" class="suggestions-grid">
+          <!-- Las sugerencias se cargarán dinámicamente aquí -->
+        </div>
+
+        <div class="load-more-container">
+          <button id="cargarMas" class="btn btn-outline">
+            Cargar Más Sugerencias
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section id="estadisticas" class="section">
+      <div class="container">
+        <h2 class="section-title">Estadísticas</h2>
+        <p class="section-description">
+          Impacto de las sugerencias de nuestra comunidad
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon primary">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="stat-number" id="total-sugerencias">0</h3>
+            <p class="stat-label">Sugerencias Recibidas</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon success">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="stat-number" id="sugerencias-implementadas">0</h3>
+            <p class="stat-label">Implementadas</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon info">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <h3 class="stat-number" id="sugerencias-revision">0</h3>
+            <p class="stat-label">En Revisión</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon accent">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="stat-number" id="participantes">0</h3>
+            <p class="stat-label">Participantes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-text">Buzón de Sugerencias</span>
+            <span class="logo-dot">●</span>
+          </div>
+          <ul class="footer-links">
+            <li>
+              <a href="#sugerencias" class="footer-link">Enviar Sugerencia</a>
+            </li>
+            <li>
+              <a href="#sugerencias-recientes" class="footer-link"
+                >Sugerencias Recientes</a
+              >
+            </li>
+            <li>
+              <a href="#estadisticas" class="footer-link">Estadísticas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Buzón de Sugerencias. Todas las sugerencias son
+            bienvenidas.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
